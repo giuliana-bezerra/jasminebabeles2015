@@ -7,7 +7,7 @@ export default class MaiorEMenor {
     encontra(nums) {
         nums.forEach(num => {
             if (num < this._menor) this._menor = num;
-            else if (num > this._maior) this._maior = num;
+            if (num > this._maior) this._maior = num;
         });
     }
 
