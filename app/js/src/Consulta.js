@@ -1,9 +1,10 @@
 export default class Consulta {
-    constructor(paciente, procedimentos, particular, retorno) {
+    constructor(paciente, procedimentos, particular, retorno, data) {
         this._paciente = paciente;
         this._procedimentos = procedimentos;
         this._particular = particular;
         this._retorno = retorno;
+        this._data = data;
     }
 
     preco() {
@@ -25,5 +26,25 @@ export default class Consulta {
 
         if (this._particular) precoFinal *= 2;
         return precoFinal;
+    }
+
+    get nome() {
+        return this._paciente;
+    }
+
+    get procedimentos() {
+        return this._procedimentos;
+    }
+
+    get particular() {
+        return this._particular;
+    }
+
+    get retorno() {
+        return this._retorno;
+    }
+
+    get data() {
+        return this._data;
     }
 }
